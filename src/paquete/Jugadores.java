@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class Jugadores {
 
-    private String nombre;
+    private String nom;
 
     private String ape;
     private int dorsal;
@@ -21,7 +21,7 @@ public class Jugadores {
 
 
     public Jugadores(String nombre, String ape, int dorsal) {
-        this.nombre = nombre;
+        this.nom = nombre;
         this.dorsal = dorsal;
         this.ape = ape;
     }
@@ -32,27 +32,27 @@ public class Jugadores {
 
     public void aumentarMejorPartido() {
 
-        this.mejorPartido = this.mejorPartido + 1;
-        System.out.println("contador de mejor del partido del jugador " + this.nombre + " aumentado a " + this.mejorPartido);
+        this.mejorPartido = this.mejorPartido + 5;
+        System.out.println("contador de mejor del partido del jugador " + this.nom + " aumentado a " + this.mejorPartido);
     }
 
     public void aumentarKilometrosRecorridos() {
         Scanner sn = new Scanner(System.in);
         this.numPartidos = this.numPartidos + 1;
-        System.out.println("¿Cuantos kilometros ha recorrido el jugador " + this.nombre + " en este partido?");
+        System.out.println("¿Cuantos kilometros ha recorrido el jugador " + this.nom + " en este partido?");
 
         kmRecorridos = kmRecorridos + sn.nextDouble();
 
-        System.out.println("media de Kms recorridos del jugador " + this.nombre + " actualizada a " + (this.kmRecorridos / numPartidos));
+        System.out.println("media de Kms recorridos del jugador " + this.nom + " actualizada a " + (this.kmRecorridos / numPartidos));
     }
 
     @Override
     public String toString() {
-        return this.nombre + " " + this.ape + " " + this.dorsal;
+        return this.nom + " " + this.ape + " " + this.dorsal;
     }
 
     public String getJugadoresFederados() {
-        return (this.nombre + " " + this.ape + " | " + (this.kmRecorridos / this.numPartidos) + " | " + this.mejorPartido);
+        return (this.nom + " " + this.ape + " | " + (this.kmRecorridos / this.numPartidos) + " | " + this.mejorPartido);
     }
 }
 

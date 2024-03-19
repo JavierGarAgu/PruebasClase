@@ -22,7 +22,7 @@ public class Main {
             System.out.printf("1.- Crear equipo  \n" +
                               "2.- Crear jugador \n" +
                               "3.- Mostrar todos los jugadores de un equipo \n" +
-                              "4.- aumentar mejor jugador por partido \n " +
+                              "4.- aumentar mejor jugador por partido \n" +
                               "5.- aumentar kilometros recorridos de nuevo partido \n" +
                               "6.- Mostrar todos los jugadores federados \n");
             op = sn.nextInt();
